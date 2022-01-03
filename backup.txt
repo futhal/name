@@ -1,7 +1,11 @@
 
+#كيفية عمل backup
 : الدخول الى ملف الاوراكل
 C:\oracle\product\10.2.0\db_1\bin
 set oracle_sid=collage
 echo %oracle_sid%
 rman target /
-RMAN> backup database;
+3> shutdown immediate
+4> startup mount
+5> backup database;
+6> SQL 'ALTER DATABASE OPEN';
